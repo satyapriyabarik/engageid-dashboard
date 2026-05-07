@@ -59,25 +59,18 @@ export default function NotificationDrawer() {
     return (
         <div
             ref={drawerRef}
-            className="
-        fixed
-        top-0
-        right-0
-        h-screen
-w-full sm:w-[400px]  
-      bg-slate-900
-        border-l
-        border-slate-800
-        z-50
-        p-5
-        shadow-2xl
-        translate-x-[420px]
-        opacity-0
+            className="fixed top-0 right-0 h-screen w-full sm:w-[400px] bg-slate-900  border-l
+            border-slate-800
+            p-5
+            z-50
+            shadow-2xl
+            translate-x-[420px]
+            opacity-0
       "
         >
             {/* HEADER */}
 
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center justify-between mb-8 z-9999">
                 <div>
                     <h2 className="text-2xl font-bold text-white">
                         Notifications

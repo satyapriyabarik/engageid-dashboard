@@ -32,7 +32,7 @@ export default function GeoMap() {
                 center={position}
                 zoom={5}
                 scrollWheelZoom={false}
-                className="h-full w-full"
+                className="h-full w-full z-0"
             >
                 <TileLayer
                     attribution='&copy; OpenStreetMap contributors'

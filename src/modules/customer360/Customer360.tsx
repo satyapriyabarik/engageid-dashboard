@@ -1,6 +1,11 @@
-import GeoMap from "../../maps/GeoMap";
-
+import { lazy, Suspense } from 'react';
 export default function Customer360() {
+    const GeoMap = lazy(
+        () =>
+            import(
+                '../../maps/GeoMap'
+            )
+    );
     return (
         <div className="space-y-6">
             <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800">
@@ -25,7 +30,15 @@ export default function Customer360() {
                 </div>
 
                 <div className="col-span-2">
-                    <GeoMap />
+                    <Suspense
+                        fallback={
+                            <div className="h-full bg-slate-900 flex items-center justify-center text-cyan-400">
+                                Loading map...
+                            </div>
+                        }
+                    >
+                        <GeoMap />
+                    </Suspense>
                 </div>
             </div>
         </div>
